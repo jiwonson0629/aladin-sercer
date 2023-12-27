@@ -12,9 +12,9 @@ app.use(express.json());
 
 app.get("/search/book", async (req, res) => {
   // 클라이언트가 보낸 쿼리값을 받아서
-  const { searchQuery } = req.query;
+  // const { searchQuery } = req.query;
   //   const url = `http://www.aladin.co.kr/~${encodeURIComponent(searchQuery)}`;
-  const url = `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=ttbpsi_321109003&Query=${searchQuery}&QueryType=Keyword&&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20131101`;
+  const url = `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=ttbpsi_321109003&Query=javascript&QueryType=Keyword&&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20131101`;
 
   try {
     // 알라딘 서버에 검색 요청
